@@ -10,6 +10,8 @@
   "author": "Chad Jewsbury",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.10.4"
+    "express": "^4.10.4",
+    "ejs": "^1.0.0",
+    "request": "^2.49.0"
   }
 }

@@ -12,10 +12,23 @@
 // server.listen(3000);
 
 var express = require('express');
+var request = require('request');
 var app = express();
+
+
+app.set("view engine", "ejs");
 
 app.get('/hello/:name', function (req, res){
   res.send('Hello World, ' + req.params.name);
+});
+
+app.get('/:name', function(req, res) {
+  var data = {
+    greeting: "Hello",
+    name: req.params.name
+  }
+
+  res.render("index", data);
 });
 
 //FIRST ATTEMPT:
